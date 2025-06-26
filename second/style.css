@@ -152,6 +152,47 @@ body {
   background-color: yellow;
 }
 
+.rectangle .tooltip {
+  position: absolute;
+  top: -15%;
+  left: 50%;
+  transform: translate(-50%, 0);
+  font-weight: 600;
+  padding: 8px 15px;
+  color: #fff;
+  font-size: 15px;
+  border-radius: 100px;
+}
+
+.rectangle:nth-child(2) .tooltip {
+  background-color: rgb(0, 170, 255);
+}
+
+.rectangle:nth-child(7) .tooltip {
+  background-color: rgb(31, 160, 78);
+}
+
+.tooltip .arrow {
+  position: absolute;
+  top: 100%;
+}
+
+.rectangle:nth-child(2) .arrow {
+  border: 5px solid rgb(0, 170, 255);
+  border-bottom-color: transparent;
+  left: 60%;
+  border-left-color: transparent;
+  border-right-color: transparent;
+}
+
+.rectangle:nth-child(7) .arrow {
+  border: 5px solid rgb(31, 160, 78);
+  border-bottom-color: transparent;
+  border-left-color: transparent;
+  left: 30%;
+  border-right-color: transparent;
+}
+
 #mrect .rectangle:nth-child(1) {
   transform: rotate(-10deg);
 }
@@ -162,34 +203,6 @@ body {
   transform: rotate(-3deg);
   z-index: 2;
   background-color: green;
-}
-
-.tooltip {
-  position: absolute;
-  top: -20%;
-  left: 50%;
-  transform: translate(-50%, 0);
-  font-weight: 500;
-  padding: 10px 20px;
-  border-radius: 100px;
-  color: white;
-}
-
-.dwar {
-  position: absolute;
-  top: 100%;
-  left: 60%;
-}
-
-#mrect .rectangle:nth-child(2) .tooltip {
-  background-color: rgb(0, 140, 255);
-}
-
-#mrect .rectangle:nth-child(2) .dwar {
-  border: 7px solid rgb(0, 140, 255);
-  border-bottom-color: transparent;
-  border-left-color: transparent;
-  border-right-color: transparent;
 }
 
 #mrect .rectangle:nth-child(3) {
@@ -228,17 +241,6 @@ body {
   transform: rotate(10deg);
   z-index: 7;
   background-color: black;
-}
-
-#mrect .rectangle:nth-child(7) .tooltip {
-  background-color: rgb(29, 145, 85);
-}
-
-#mrect .rectangle:nth-child(7) .dwar {
-  border: 7px solid rgb(29, 145, 85);
-  border-bottom-color: transparent;
-  border-left-color: transparent;
-  border-right-color: transparent;
 }
 
 #spencer {
@@ -327,4 +329,36 @@ body {
   right: 0;
   background-color: orangered;
   transform: rotate(-2deg);
+}
+
+#trusted {
+  width: 100%;
+  padding-top: 1px;
+  min-height: 100vh;
+}
+
+#trustedtext {
+  margin-top: 80px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#trustedtext h4 {
+  opacity: 0.5;
+}
+
+#trustedtext h1 {
+  font-size: 60px;
+  font-weight: 700;
+  letter-spacing: -3px;
+}
+
+#trustedimage {
+  width: 50%;
+  margin-top: 50px;
+}
+
+#trustedimage img {
+  width: 100%;
 }
